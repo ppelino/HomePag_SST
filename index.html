@@ -73,4 +73,70 @@
     </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa NR 01</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Avaliação da Norma Regulamentadora NR 01</h2>
+    <form id="surveyForm">
+        <label for="satisfacao">Qual seu nível de satisfação com a NR 01?</label>
+        <select id="satisfacao">
+            <option value="5">Muito satisfeito</option>
+            <option value="4">Satisfeito</option>
+            <option value="3">Neutro</option>
+            <option value="2">Insatisfeito</option>
+            <option value="1">Muito insatisfeito</option>
+        </select>
+        <br><br>
+        <label for="comentario">Comentário (opcional):</label>
+        <textarea id="comentario" rows="4" cols="50"></textarea>
+        <br><br>
+        <button type="button" onclick="enviarPesquisa()">Enviar</button>
+    </form>
+    
+    <h2>Resultados da Pesquisa</h2>
+    <canvas id="graficoSatisfacao" width="400" height="200"></canvas>
+    
+    <script>
+        let respostas = JSON.parse(localStorage.getItem("respostasNR01")) || [];
+        
+        function enviarPesquisa() {
+            let satisfacao = document.getElementById("satisfacao").value;
+            let comentario = document.getElementById("comentario").value;
+            
+            respostas.push({ satisfacao: parseInt(satisfacao), comentario: comentario });
+            localStorage.setItem("respostasNR01", JSON.stringify(respostas));
+            atualizarGrafico();
+        }
+        
+        function atualizarGrafico() {
+            let contagens = [0, 0, 0, 0, 0];
+            respostas.forEach(res => contagens[res.satisfacao - 1]++);
+            
+            let ctx = document.getElementById("graficoSatisfacao").getContext("2d");
+            if (window.myChart) window.myChart.destroy();
+            
+            window.myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Muito insatisfeito", "Insatisfeito", "Neutro", "Satisfeito", "Muito satisfeito"],
+                    datasets: [{
+                        label: "Quantidade de Respostas",
+                        data: contagens,
+                        backgroundColor: ["red", "orange", "yellow", "lightgreen", "green"]
+                    }]
+                }
+            });
+        }
+        
+        document.addEventListener("DOMContentLoaded", atualizarGrafico);
+    </script>
+</body>
+</html>
+
 
