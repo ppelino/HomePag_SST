@@ -16,32 +16,48 @@
             margin: 20px 0;
         }
 
-        /* Estilização dos links sociais */
-        .social-links {
-            display: flex;
-            gap: 10px;
-            padding: 10px 0;
+        /* Botão fixo "Fale Conosco" */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
         }
 
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.8);
-            transition: transform 0.2s ease-in-out;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .floating-button:hover {
+            background-color: #218838;
         }
 
-        .social-links a:hover {
-            transform: scale(1.1);
+        /* Estilo do formulário de contato */
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .social-links img {
-            width: 32px;
-            height: 32px;
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -56,15 +72,14 @@
                 <li><a href="#contact">Contato</a></li>
                 <li><a href="#trainings">Treinamentos</a></li>
                 <li><a href="#survey">Pesquisa NR 01</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about" class="section-container">
         <h2>Sobre a DataInsight Consultoria e Assessoria em SST</h2>
-        <p>
-            Eu sou um profissional autônomo que presta serviços avulsos de consultoria, assessoria e palestras nas áreas de segurança do trabalho e análise de dados...
-        </p>
+        <p>Eu sou um profissional autônomo que presta serviços avulsos de consultoria, assessoria e palestras nas áreas de segurança do trabalho e análise de dados...</p>
     </section>
 
     <section id="services" class="section-container">
@@ -78,31 +93,10 @@
         </ul>
     </section>
 
-    <section id="trainings" class="section-container">
-        <h2>Treinamentos Oferecidos</h2>
-        <ul>
-            <li>Integração de Segurança (NR 1)</li>
-            <li>Segurança no Trabalho em Altura (NR 35)</li>
-            <li>Brigada de Incêndio (NR 23)</li>
-            <li>Primeiros Socorros (NR 7)</li>
-            <li>Segurança em Espaços Confinados (NR 33)</li>
-            <li>Ergonomia no Trabalho (NR 17)</li>
-            <li>Operação Segura de Máquinas e Equipamentos (NR 12)</li>
-        </ul>
-    </section>
-
     <section id="contact" class="section-container">
         <h2>Contato</h2>
         <p>Telefone celular: (11) 97719-8220 ou (11) 98944-5550</p>
         <p>E-mails: ppelino@hotmail.com, engestedsonbraz@gmail.com</p>
-
-        <div class="social-links">
-            <a href="https://edsonbraz-portfolio.netlify.app/" target="_blank"><img src="site-icon.png" alt="Site"></a>
-            <a href="https://api.whatsapp.com/send?phone=119771982220" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
-            <a href="https://www.linkedin.com/in/edsonbrazdados/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://www.instagram.com/engestedsonbraz/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="https://github.com/ppelino" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
-        </div>
     </section>
 
     <section id="survey" class="section-container">
@@ -117,57 +111,40 @@
                 <option value="1">Muito insatisfeito</option>
             </select>
             <br><br>
-            <label for="comentario">Comentário (opcional):</label>
-            <textarea id="comentario" rows="4" cols="50"></textarea>
-            <br><br>
             <button type="button" onclick="enviarPesquisa()">Enviar</button>
         </form>
+    </section>
 
-        <h2>Resultados da Pesquisa</h2>
-        <canvas id="graficoSatisfacao" width="400" height="200"></canvas>
+    <!-- Seção Fale Conosco -->
+    <section id="fale-conosco" class="section-container">
+        <h2>Fale Conosco</h2>
+        <form class="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" placeholder="Digite sua mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; DataInsight Consultoria e Assessoria em SST 2024. Todos os direitos reservados.</p>
+        <p>&copy; DataInsight Consultoria e Assessoria em SST 2025. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        let respostas = JSON.parse(localStorage.getItem("respostasNR01")) || [];
+    <!-- Botão fixo para Fale Conosco -->
+    <a href="#fale-conosco" class="floating-button">Fale Conosco</a>
 
+    <script>
         function enviarPesquisa() {
             let satisfacao = document.getElementById("satisfacao").value;
-            let comentario = document.getElementById("comentario").value;
-
-            respostas.push({ satisfacao: parseInt(satisfacao), comentario: comentario });
-            localStorage.setItem("respostasNR01", JSON.stringify(respostas));
-            atualizarGrafico();
+            alert("Obrigado por participar da pesquisa!");
         }
-
-        function atualizarGrafico() {
-            let contagens = [0, 0, 0, 0, 0];
-            respostas.forEach(res => contagens[res.satisfacao - 1]++);
-
-            let ctx = document.getElementById("graficoSatisfacao").getContext("2d");
-            if (window.myChart) window.myChart.destroy();
-
-            window.myChart = new Chart(ctx, {
-                type: "bar",
-                data: {
-                    labels: ["Muito insatisfeito", "Insatisfeito", "Neutro", "Satisfeito", "Muito satisfeito"],
-                    datasets: [{
-                        label: "Quantidade de Respostas",
-                        data: contagens,
-                        backgroundColor: ["red", "orange", "yellow", "lightgreen", "green"]
-                    }]
-                }
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", atualizarGrafico);
     </script>
 
 </body>
 </html>
-
-  
-  
