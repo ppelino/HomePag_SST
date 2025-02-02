@@ -59,6 +59,34 @@
         .contact-form button:hover {
             background-color: #0056b3;
         }
+
+        /* Estilo dos ícones sociais */
+        .social-links {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+        }
     </style>
 </head>
 <body>
@@ -97,22 +125,14 @@
         <h2>Contato</h2>
         <p>Telefone celular: (11) 97719-8220 ou (11) 98944-5550</p>
         <p>E-mails: ppelino@hotmail.com, engestedsonbraz@gmail.com</p>
-    </section>
 
-    <section id="survey" class="section-container">
-        <h2>Avaliação da Norma Regulamentadora NR 01</h2>
-        <form id="surveyForm">
-            <label for="satisfacao">Qual seu nível de satisfação com a NR 01?</label>
-            <select id="satisfacao">
-                <option value="5">Muito satisfeito</option>
-                <option value="4">Satisfeito</option>
-                <option value="3">Neutro</option>
-                <option value="2">Insatisfeito</option>
-                <option value="1">Muito insatisfeito</option>
-            </select>
-            <br><br>
-            <button type="button" onclick="enviarPesquisa()">Enviar</button>
-        </form>
+        <div class="social-links">
+            <a href="https://edsonbraz-portfolio.netlify.app/" target="_blank"><img src="site-icon.png" alt="Site"></a>
+            <a href="https://api.whatsapp.com/send?phone=119771982220" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://www.linkedin.com/in/edsonbrazdados/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/engestedsonbraz/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://github.com/ppelino" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+        </div>
     </section>
 
     <!-- Seção Fale Conosco -->
@@ -133,7 +153,7 @@
     </section>
 
     <footer>
-        <p>&copy; DataInsight Consultoria e Assessoria em SST 2025. Todos os direitos reservados.</p>
+        <p>&copy; DataInsight Consultoria e Assessoria em SST 2024. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Botão fixo para Fale Conosco -->
@@ -148,3 +168,5 @@
 
 </body>
 </html>
+
+   
