@@ -5,8 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataInsight Consultoria e Assessoria em SST - Edson Gomes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilização das seções com fundo branco */
+        .section-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        /* Estilização dos links sociais */
+        .social-links {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Engenheiro de Segurança do Trabalho Edson Gomes</h1>
         <nav>
@@ -15,22 +55,19 @@
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li><a href="#trainings">Treinamentos</a></li>
-                <li><a href="#data-analysis">Análise de Dados</a></li>
-               
+                <li><a href="#survey">Pesquisa NR 01</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="section-container">
         <h2>Sobre a DataInsight Consultoria e Assessoria em SST</h2>
         <p>
-
-Eu sou um profissional autônomo que presta serviços avulsos de consultoria, assessoria e palestras nas áreas de segurança do trabalho e análise de dados. Atualmente, atuo de forma independente, atendendo demandas específicas conforme as necessidades dos meus clientes. Meu objetivo é oferecer soluções personalizadas, com transparência, qualidade e eficiência, contribuindo para a melhoria dos processos e a segurança nas organizações.
-
-</p>
+            Eu sou um profissional autônomo que presta serviços avulsos de consultoria, assessoria e palestras nas áreas de segurança do trabalho e análise de dados...
+        </p>
     </section>
 
-    <section id="services">
+    <section id="services" class="section-container">
         <h2>Nossos Serviços</h2>
         <ul>
             <li>Consultoria em Segurança do Trabalho</li>
@@ -41,7 +78,7 @@ Eu sou um profissional autônomo que presta serviços avulsos de consultoria, as
         </ul>
     </section>
 
-    <section id="trainings">
+    <section id="trainings" class="section-container">
         <h2>Treinamentos Oferecidos</h2>
         <ul>
             <li>Integração de Segurança (NR 1)</li>
@@ -51,154 +88,68 @@ Eu sou um profissional autônomo que presta serviços avulsos de consultoria, as
             <li>Segurança em Espaços Confinados (NR 33)</li>
             <li>Ergonomia no Trabalho (NR 17)</li>
             <li>Operação Segura de Máquinas e Equipamentos (NR 12)</li>
-            <li>CIPA (NR 5)</li>
-            <li>Uso de EPIs</li>
-            <li>Segurança em Trabalhos com Eletricidade (NR 10)</li>
-            <li>Conscientização em Segurança e Saúde no Trabalho</li>
-            <li>Segurança no Transporte e Movimentação de Cargas</li>
-            <li>Outros Treinamentos Personalizados</li>
         </ul>
     </section>
-<style>
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-    .social-links {
-        display: flex;
-        gap: 10px;
-        padding: 10px 0;
-    }
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.2);
-        transition: transform 0.2s ease-in-out;
-    }
-    .social-links a:hover {
-        transform: scale(1.1);
-    }
-    .social-links img {
-        width: 32px;
-        height: 32px;
-    }
-<style>
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-    }
-    .social-links {
-        display: flex;
-        gap: 10px;
-        padding: 10px 0;
-    }
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.8);
-        transition: transform 0.2s ease-in-out;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .social-links a:hover {
-        transform: scale(1.1);
-    }
-    .social-links img {
-        width: 32px;
-        height: 32px;
-    }
-</style>
 
-<div class="contact-container">
-    <div id="contato">
+    <section id="contact" class="section-container">
         <h2>Contato</h2>
         <p>Telefone celular: (11) 97719-8220 ou (11) 98944-5550</p>
         <p>E-mails: ppelino@hotmail.com, engestedsonbraz@gmail.com</p>
-    </div>
 
-    <div class="social-links">
-          <a href="https://edsonbraz-portfolio.netlify.app/" target="_blank">
-            <img src="site-icon.png" alt="Site">
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=119771982220" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.linkedin.com/in/edsonbrazdados/" target="_blank">
-            <img src="linkedin-icon.png" alt="LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/engestedsonbraz/" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://github.com/ppelino" target="_blank">
-            <img src="github-icon.png" alt="GitHub">
-        </a>
-    </div>
-</div>
+        <div class="social-links">
+            <a href="https://edsonbraz-portfolio.netlify.app/" target="_blank"><img src="site-icon.png" alt="Site"></a>
+            <a href="https://api.whatsapp.com/send?phone=119771982220" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://www.linkedin.com/in/edsonbrazdados/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/engestedsonbraz/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://github.com/ppelino" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+        </div>
+    </section>
 
+    <section id="survey" class="section-container">
+        <h2>Avaliação da Norma Regulamentadora NR 01</h2>
+        <form id="surveyForm">
+            <label for="satisfacao">Qual seu nível de satisfação com a NR 01?</label>
+            <select id="satisfacao">
+                <option value="5">Muito satisfeito</option>
+                <option value="4">Satisfeito</option>
+                <option value="3">Neutro</option>
+                <option value="2">Insatisfeito</option>
+                <option value="1">Muito insatisfeito</option>
+            </select>
+            <br><br>
+            <label for="comentario">Comentário (opcional):</label>
+            <textarea id="comentario" rows="4" cols="50"></textarea>
+            <br><br>
+            <button type="button" onclick="enviarPesquisa()">Enviar</button>
+        </form>
 
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisa NR 01</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <h2>Avaliação da Norma Regulamentadora NR 01</h2>
-    <form id="surveyForm">
-        <label for="satisfacao">Qual seu nível de satisfação com a NR 01?</label>
-        <select id="satisfacao">
-            <option value="5">Muito satisfeito</option>
-            <option value="4">Satisfeito</option>
-            <option value="3">Neutro</option>
-            <option value="2">Insatisfeito</option>
-            <option value="1">Muito insatisfeito</option>
-        </select>
-        <br><br>
-        <label for="comentario">Comentário (opcional):</label>
-        <textarea id="comentario" rows="4" cols="50"></textarea>
-        <br><br>
-        <button type="button" onclick="enviarPesquisa()">Enviar</button>
-    </form>
-    
-    <h2>Resultados da Pesquisa</h2>
-    <canvas id="graficoSatisfacao" width="400" height="200"></canvas>
-    
+        <h2>Resultados da Pesquisa</h2>
+        <canvas id="graficoSatisfacao" width="400" height="200"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; DataInsight Consultoria e Assessoria em SST 2024. Todos os direitos reservados.</p>
+    </footer>
+
     <script>
         let respostas = JSON.parse(localStorage.getItem("respostasNR01")) || [];
-        
+
         function enviarPesquisa() {
             let satisfacao = document.getElementById("satisfacao").value;
             let comentario = document.getElementById("comentario").value;
-            
+
             respostas.push({ satisfacao: parseInt(satisfacao), comentario: comentario });
             localStorage.setItem("respostasNR01", JSON.stringify(respostas));
             atualizarGrafico();
         }
-        
+
         function atualizarGrafico() {
             let contagens = [0, 0, 0, 0, 0];
             respostas.forEach(res => contagens[res.satisfacao - 1]++);
-            
+
             let ctx = document.getElementById("graficoSatisfacao").getContext("2d");
             if (window.myChart) window.myChart.destroy();
-            
+
             window.myChart = new Chart(ctx, {
                 type: "bar",
                 data: {
@@ -211,20 +162,12 @@ Eu sou um profissional autônomo que presta serviços avulsos de consultoria, as
                 }
             });
         }
-        
+
         document.addEventListener("DOMContentLoaded", atualizarGrafico);
     </script>
+
 </body>
 </html>
 
- <h3 style="background-color: white; padding: 20px; border-radius: 10px;">
-    </ul>
-</section>
-    
-    <footer>
-        <p>&copy; DataInsight Consultoria e Assessoria em SST 2024. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
-   
+  
   
