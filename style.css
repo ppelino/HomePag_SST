@@ -70,3 +70,30 @@ a:hover {
     color: #333;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Efeito de brilho ao passar o mouse */
 }
+/* Deixar o fundo da página transparente */
+body {
+    background: transparent;
+    color: #000; /* Mantém a cor do texto legível */
+}
+
+/* Sombra nos títulos */
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sombra nos parágrafos */
+p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Sombra nos links do menu */
+nav ul li a {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Deixar as seções visíveis sem fundo branco */
+.section-container {
+    background: rgba(255, 255, 255, 0.5); /* Fundo levemente transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
