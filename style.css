@@ -70,30 +70,66 @@ a:hover {
     color: #333;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Efeito de brilho ao passar o mouse */
 }
-/* Deixar o fundo da página transparente */
+/* Definir a imagem de fundo e manter fixa */
 body {
-    background: transparent;
-    color: #000; /* Mantém a cor do texto legível */
+    background: url('SST2.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: white; /* Texto padrão branco */
 }
 
-/* Sombra nos títulos */
+/* Sombra nos textos para melhor leitura */
 h1, h2, h3 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 /* Sombra nos parágrafos */
-p {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+p, li {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Sombra nos links do menu */
-nav ul li a {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Deixar as seções visíveis sem fundo branco */
+/* Seções semi-transparentes para destacar o conteúdo */
 .section-container {
-    background: rgba(255, 255, 255, 0.5); /* Fundo levemente transparente */
-    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    background: rgba(0, 0, 0, 0.5); /* Preto semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white; /* Mantém o texto legível */
 }
+
+/* Menu interativo com sombra */
+nav ul li a {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efeito hover nos links */
+nav ul li a:hover {
+    color: #FFD700; /* Destaca ao passar o mouse */
+}
+
+/* Botão flutuante estilizado */
+.floating-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.floating-button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+/* Formulário interativo */
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
+    color: black; /* Texto escuro para legibilidade */
+}
+
 
