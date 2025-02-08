@@ -169,6 +169,35 @@
     </form>
 </section>
     <footer>
+<body>
+    <h1>Bem-vindo ao meu site!</h1>
+
+    <div class="container">
+        <h2>Álcool ou Gasolina?</h2>
+        <p>Informe os preços para saber qual vale mais a pena!</p>
+        <input type="number" id="precoAlcool" placeholder="Preço do Álcool (R$)">
+        <input type="number" id="precoGasolina" placeholder="Preço da Gasolina (R$)">
+        <button onclick="calcularMelhorCombustivel()">Calcular</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularMelhorCombustivel() {
+            let precoAlcool = parseFloat(document.getElementById('precoAlcool').value);
+            let precoGasolina = parseFloat(document.getElementById('precoGasolina').value);
+            
+            if (isNaN(precoAlcool) || isNaN(precoGasolina) || precoAlcool <= 0 || precoGasolina <= 0) {
+                document.getElementById('resultado').innerHTML = "Por favor, insira valores válidos.";
+                return;
+            }
+            
+            let relacao = precoAlcool / precoGasolina;
+            let resultado = relacao <= 0.7 ? "Vale mais a pena abastecer com Álcool!" : "Vale mais a pena abastecer com Gasolina!";
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+
         <p>&copy; DataInsight Consultoria e Assessoria em SST 2025. Todos os direitos reservados.</p>
     </footer>
 
