@@ -1,0 +1,113 @@
+/* Define a imagem SST2.jpg como fundo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('SST2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* Deixa o texto mais visível */
+}
+
+/* Fundo semi-transparente para as seções */
+.section-container {
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Efeito de brilho sutil */
+    margin: 20px 10%;
+    color: #fff; /* Deixa o texto branco para melhor contraste */
+}
+
+/* Melhorando a visibilidade dos títulos */
+h1, h2 {
+    color: #fff;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); /* Efeito de brilho */
+}
+
+/* Melhorando os parágrafos e listas */
+p, ul {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Melhorando a navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 1);
+}
+
+/* Melhorando os botões */
+button, .floating-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, .floating-button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+/* Melhorando os ícones sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    border-top: 2px solid #fff;
+}
