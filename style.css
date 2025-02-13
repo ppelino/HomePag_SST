@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('SST2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; /* Cor padrão do texto: preto */
+}
+
+header {
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+p, ul {
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border-top: 2px solid #000;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Efeito de brilho */
+}
+
+a:hover {
+    color: #333;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Efeito de brilho ao passar o mouse */
+}
